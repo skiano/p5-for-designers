@@ -49,11 +49,6 @@ body {
   color: #494343;
 }
 
-iframe {
-  border: 1px solid red;
-  outline: 1px solid #b5b2b2;
-}
-
 main {
   margin: 50px auto;
   max-width: 900px;
