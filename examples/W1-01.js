@@ -4,11 +4,11 @@
 
 function setup() {
   createCanvas(900, 400);
-  background('red');
+  background('#abc');
 }
 
 function draw() {
   if (mouseIsPressed) {
-    circle(mouseX, mouseY, 100); 
+    circle(mouseX, mouseY, 80); 
   }
 }

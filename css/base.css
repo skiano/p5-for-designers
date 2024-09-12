@@ -50,9 +50,8 @@ body {
 }
 
 iframe {
-  border: none;
-  outline: none;
-  appearance: none;
+  border: 1px solid red;
+  outline: 1px solid #b5b2b2;
 }
 
 main {
