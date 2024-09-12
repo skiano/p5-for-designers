@@ -47,6 +47,7 @@ body {
   line-height: 1.4;
   letter-spacing: -0.005em;
   color: #494343;
+  padding: 12px;
 }
 
 main {
@@ -58,7 +59,8 @@ main {
   gap: 20px;
 }
 
-section {
+section,
+.md-wide {
   width: 100%;
   max-width: 600px;
 }
