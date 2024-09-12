@@ -3,8 +3,9 @@
  */
 
 function setup() {
-  createCanvas(900, 400);
+  createCanvas(100, 100);
   background('#abc');
+  loopLength(10)
 }
 
 function draw() {
