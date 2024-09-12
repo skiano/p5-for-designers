@@ -16,9 +16,11 @@ function affixCanvas(canvas) {
 
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
-    if (entry.target._handleResize) entry.target._handleResize()
+    if (entry.target.children[0]._handleResize) entry.target.children[0]._handleResize()
   }
 });
+
+// todo: prevent flicker by waiting to resize the canvas in a before draw hook
 
 (function p5Responsive(p5) {
   let previousBackground;
@@ -39,7 +41,7 @@ const resizeObserver = new ResizeObserver((entries) => {
 
   p5.prototype.postSetup = function() {
     this.canvas._handleResize = this.handleResize.bind(this);
-    resizeObserver.observe(this.canvas);
+    resizeObserver.observe(this.canvas.parentNode);
   }
 
   p5.prototype.registerMethod('afterSetup', p5.prototype.postSetup);
