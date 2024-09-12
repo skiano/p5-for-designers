@@ -41,7 +41,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+iframe {
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
 main {
-  outline: 10px solid red !important;
-  outline-offset: -10px;
+  margin: 50px auto;
+  padding: 12px;
+  max-width: 900px;
 }

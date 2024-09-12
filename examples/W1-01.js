@@ -1,6 +1,5 @@
 /**
- * @requires ./plugins/plugin-a.js
- * @requires ./plugins/plugin-b.js
+ * @requires plugins/loopFrame.js
  */
 
 function setup() {
