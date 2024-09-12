@@ -17,6 +17,10 @@
         }
       }
     </script>
-    <script type="module" src="./main.js"></script>
+    <script type="module">
+      import loadExample from './lib/loadExample.js';
+      const eg = await loadExample('W1-01');
+      document.body.append(eg);
+    </script>
   </body>
 </html>

@@ -40,3 +40,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+main {
+  outline: 10px solid red !important;
+  outline-offset: -10px;
+}

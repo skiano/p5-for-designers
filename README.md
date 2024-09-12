@@ -1,9 +1,8 @@
 # P5.js For Designers
 
-
 ## Local development
 
-You just need a webserver to serve these files.
+You just need an internet connection and a webserver to serve these files.
 
 If you have python, try:
 
