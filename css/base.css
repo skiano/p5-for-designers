@@ -48,6 +48,12 @@ body {
   letter-spacing: -0.005em;
   color: #494343;
   padding: 12px;
+  opacity: 1;
+  transition: opacity 350ms ease-out;
+}
+
+body.pending {
+  opacity: 0;
 }
 
 main {

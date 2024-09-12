@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/base.css">
   </head>
-  <body class="center-body-content">
-
+  <body class="pending">
     <main>
       <section>
         <header>
@@ -48,6 +47,11 @@
           "comment-parser": "https://esm.run/comment-parser@1.4.1"
         }
       }
+    </script>
+    <script type="module">
+      const undefinedElements = document.querySelectorAll(":not(:defined)");
+      await Promise.all(Array.from(new Set([...undefinedElements].map(e => e.localName))).map(n => customElements.whenDefined(n)))
+      document.body.classList.remove('pending');
     </script>
     <script type="module" src="./lib/P5Example.js"></script>
   </body>
