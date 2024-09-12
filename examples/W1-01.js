@@ -1,3 +1,8 @@
+/**
+ * @requires ./plugins/plugin-a.js
+ * @requires ./plugins/plugin-b.js
+ */
+
 function setup() {
   createCanvas(900, 400);
   background('red');

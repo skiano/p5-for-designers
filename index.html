@@ -9,18 +9,19 @@
     <link rel="stylesheet" href="./css/base.css">
   </head>
   <body class="center-body-content">
-    <div id="app"></div>
+
+    <!-- <main> -->
+      <p5-example src="./examples/W1-01.js"/>
+    <!-- </main> -->
+
     <script type="importmap">
       {
         "imports": {
-          "p5": "https://esm.run/p5@1.10"
+          "p5": "https://esm.run/p5@1.10",
+          "comment-parser": "https://esm.run/comment-parser@1.4.1"
         }
       }
     </script>
-    <script type="module">
-      import loadExample from './lib/loadExample.js';
-      const eg = await loadExample('W1-01');
-      document.body.append(eg);
-    </script>
+    <script type="module" src="./lib/loadExample.js"></script>
   </body>
 </html>
