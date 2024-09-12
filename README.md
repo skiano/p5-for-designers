@@ -1,2 +1,20 @@
 # P5.js For Designers
 
+
+## Local development
+
+You just need a webserver to serve these files.
+
+If you have python, try:
+
+```bash
+$ cd ~/path/to/this/code
+$ python3 -m http.server
+```
+
+Or you could install node’s [http-server](https://www.npmjs.com/package/http-server) globally.
+
+```bash
+$ cd ~/path/to/this/code
+$ http-server . -c-1
+```
