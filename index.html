@@ -7,26 +7,67 @@
     <title>P5.js for Designers</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/github.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/genz@0.10.2/addons/client.min.js"></script>
+    <script src="./lib/inlineCodeSnippet.js"></script>
   </head>
-  <body class="pending">
+  <body>
     <main>
       <section>
         <header>
-          <h1>Page Title</h1>
+          <h1>Introduction</h1>
         </header>
       </section>
+
       <section>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla ultricies lorem, sit amet ultricies odio congue eu. Praesent turpis nulla, mollis sed blandit tempor, tincidunt ut ante. Fusce a urna et nunc consectetur porttitor vel non odio. Morbi porttitor venenatis diam sed ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce molestie blandit turpis, vehicula tempor nibh cursus eget. Aenean id velit hendrerit, maximus libero eu, luctus quam. Nulla tincidunt finibus lectus sed scelerisque.
+          Most design today is dynamic: displaying live data, responding to user input, adapting to a dizzying array of devices, and on and on. Designers in this environment must think, not just visually, but programmatically as well. Learning to program can sensitize us to the limitations—and the power—of creating with code.
+        </p>
+        <p>
+          In this introductory five-session weekly workshop, students will learn the basics of p5.js, a popular and approachable JavaScript library for creative coding. By the end, they will have a grasp of core coding concepts, such as variables, logic, looping, functions, and data structures, as well as an appreciation for how code and visual thinking can inform each other, leading to fruitful surprises.
+        </p>
+        <p>
+          All classes will be synchronous and remote, and there will be a mix of instruction, demos, exercises, and assisted in-class work. Students will be expected to apply what they learn to experimental sketches outside class, but the workload will largely depend on their individual curiosity.
         </p>
       </section>
 
-      <p5-example
-        src="./examples/W1-01.js"
-        width="900"
-        height="400"
-        responsive
-      ></p5-example>
+      <section>
+        <h2>What is p5.js</h2>
+        <p>
+          P5.js is a creative coding library built with javaScript. It is not, by any means, the only way to do creative coding, but it has a few notable benefits. First, it is open source and runs in any web browser, meaning it is free and easy to use on the internet. That makes it well suited for embedding in websites and supporting user interaction. Second, p5.js is popular, so you can easily find examples and tutorials for most problems. Third, since it is based on processing (another popular creative coding library built with Java), you will learn patterns that can be applied to both.
+        </p>
+      </section>
+
+      <gen-z
+        is="p5-viewer"
+        data-src="./examples/W1-01.js"
+        ratio="9/4"
+        style="background: #abc;"
+      ></gen-z>
+
+      <section>
+        <p>
+          Aenean imperdiet efficitur eros, in auctor risus gravida sed. Praesent tristique magna at mauris gravida tempor. Phasellus malesuada, nisi vitae commodo dapibus, purus sem feugiat leo, sed tristique dui odio vel nisi. Donec gravida vel velit nec rhoncus. Sed laoreet urna sit amet nunc convallis, id dignissim diam porttitor. Suspendisse luctus interdum mauris, et posuere nisi fermentum feugiat. In hac habitasse platea dictumst. Praesent lobortis eleifend ultricies. Donec quis enim magna. Maecenas leo enim, tincidunt in aliquet vel, finibus eu mi. Aliquam a turpis vel lectus finibus auctor. Mauris accumsan diam eros, quis euismod risus rutrum vel. Cras finibus nisl sit amet nibh iaculis volutpat. In malesuada scelerisque elit, et scelerisque libero dapibus in. Proin sit amet magna fermentum eros pulvinar pretium et ut elit.
+        </p>
+        <p>
+          Suspendisse potenti. Maecenas id pharetra nisl, eget rhoncus sapien. Quisque tincidunt justo nec urna auctor scelerisque. Nunc lobortis ornare arcu sed consectetur. Integer lectus neque, gravida vehicula nibh non, dictum egestas elit. Suspendisse vitae vestibulum tortor. Maecenas nunc neque, sollicitudin et consequat sit amet, varius elementum nibh. Nam vitae posuere nulla. Quisque tempor fringilla nisl, eu imperdiet lorem dignissim sit amet. Nam rutrum purus eu mi placerat, eget suscipit orci mollis. Donec pharetra nisl a erat aliquet elementum.
+        </p>
+      </section>
+      
+      <section>
+        <script>
+          inlineCodeSnippet(function () {
+            function setup() {
+              background('red');
+            }
+
+            // A comment...
+            function draw() {
+              line(0, 0, 100, 100);
+            }
+          });
+        </script>
+      </section>
 
       <section>
         <p>
@@ -37,8 +78,14 @@
         </p>
       </section>
 
-      <p5-example class="md-wide" src="./examples/W1-02.js" width="200" height="200" responsive>
-      </p5-example>
+      <section>
+        <gen-z
+          is="p5-viewer"
+          data-src="./examples/W1-02.js"
+          ratio="3/2"
+          style="background: #bca;"
+        ></gen-z>
+      </section>
     </main>
     <script type="importmap">
       {
@@ -48,11 +95,8 @@
         }
       }
     </script>
-    <script type="module">
-      const undefinedElements = document.querySelectorAll(":not(:defined)");
-      await Promise.all(Array.from(new Set([...undefinedElements].map(e => e.localName))).map(n => customElements.whenDefined(n)))
-      document.body.classList.remove('pending');
-    </script>
-    <script type="module" src="./lib/P5Example.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+    <script type="module" src="./lib/loadExamples.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
