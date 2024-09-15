@@ -10,7 +10,8 @@
   p5.prototype.fakeMouse = function() {
     this.mouseX = x;
     this.mouseY = y;
-    this.mouseIsPressed = Math.floor(this.frameCount / 18) % 4;
+    // this.mouseIsPressed = Math.floor(this.frameCount / 18) % 4;
+    this.mouseIsPressed = true;
     x += vx;
     y += vy;
 
@@ -20,7 +21,7 @@
 
   setInterval(() => {
     window.location.reload();
-  }, 5000);
+  }, 8000);
 
   p5.prototype.registerMethod('pre', p5.prototype.fakeMouse);
 

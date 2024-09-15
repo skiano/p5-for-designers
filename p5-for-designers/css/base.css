@@ -46,7 +46,7 @@ body {
   font-size: 16px;
   line-height: 1.45;
   letter-spacing: -0.005em;
-  color: #494343;
+  color: #454b45;
   padding: 16px;
   opacity: 1;
   transition: opacity 350ms ease-out;
@@ -80,11 +80,11 @@ em {
 
 strong {
   font-weight: bold;
-  color: #180e0e;
+  color: #292d29;
 }
 
 h1, h2, h3 {
-  color: #180e0e;
+  color: #292d29;
   font-weight: bold;
 }
 
