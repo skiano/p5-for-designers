@@ -2,7 +2,7 @@
 import { localAsset } from '/p5-for-designers/js/util.js';
 import { parse as parseComments } from 'comment-parser';
 
-window.onGenZ('p5-viewer', async function loadExample(root, props) {
+window.onHoldIt('p5-viewer', async function loadExample(root, props) {
   const iframe = document.createElement('iframe');
   iframe.credentialless = 'true';
   iframe.position = 'absolute';
