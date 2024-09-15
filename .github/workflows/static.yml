@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload subfolder
-          path: './${GITHUB_REPOSITORY}'
+          path: './${{ GITHUB_REPOSITORY }}'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
