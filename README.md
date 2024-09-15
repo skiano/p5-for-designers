@@ -17,3 +17,7 @@ Or you could install node’s [http-server](https://www.npmjs.com/package/http-s
 $ cd ~/path/to/this/code
 $ http-server . -c-1
 ```
+
+## Deployment
+
+All the paths should match because the directory matches the eventual github pages route, which means all the paths can be absolute (yay!!)
