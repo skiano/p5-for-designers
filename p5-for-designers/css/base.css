@@ -175,11 +175,11 @@ aside {
   font-size: 28px;
   margin: 30px 0;
   padding: 20px 0;
-  color: #8484ff;
+  color: magenta;
   position: relative;
   text-align: center;
   text-wrap: balance; /* better ragging */
-  border: 3px solid #8484ff;
+  border: 2px solid magenta;
 }
 
 figure {
