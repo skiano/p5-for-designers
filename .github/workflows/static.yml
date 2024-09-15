@@ -36,7 +36,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload subfolder
+          # Upload a subfolder with the same name as the repository
+          # This may seem odd, but... If you do this it meanse
+          # you can hardcode paths to assets in html files in a way
+          # that works both locally and remotely without rewriting them
+          # when you move them into new folders and without
+          # extra configuration in your local web server
           path: ./${{ github.event.repository.name }}
       - name: Deploy to GitHub Pages
         id: deployment
