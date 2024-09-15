@@ -12,10 +12,10 @@ function draw() {
   strokeWeight(2);
   textFont('Helvetica');
   textAlign(CENTER, CENTER);
-  textSize(140);
+  textSize(width / 4);
   textStyle(BOLD);
 
-  let defaultX = width / 2 + 10;
+  let defaultX = width / 2 + 20;
   let defaultY = height / 2 + 10;
 
   if (
@@ -31,7 +31,7 @@ function draw() {
     finalY = lerp(finalY, defaultY, 0.1);
   }
 
-  let myText = 'WOW';
+  let myText = 'YAY.';
   let copies = 21;
   let startX = width - finalX;
   let startY = height - finalY;
