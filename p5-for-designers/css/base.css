@@ -63,11 +63,14 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
 }
 
 nav {
   /* margin-bottom: 10px; */
-  font-size: 14px;
+  
   font-weight: bold;
   color: #8484ff;
   display: flex;
@@ -75,8 +78,14 @@ nav {
   gap: 6px;
 }
 
-nav a {
+header a {
   text-decoration: none;
+  font-weight: bold;
+  color: magenta;
+}
+
+#home-link {
+  color: #b1c0b1;
 }
 
 main {
