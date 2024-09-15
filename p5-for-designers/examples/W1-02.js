@@ -1,8 +1,10 @@
-let finalX = 0;
-let finalY = 0;
+let finalX;
+let finalY;
 
 function setup() {
   createCanvas(540, 540);
+  finalX = width / 2;
+  finalY = height / 2;
 }
 
 function draw() {
@@ -15,8 +17,6 @@ function draw() {
   textSize(width / 4);
   textFont('Helvetica');
 
-  let copies = 21;
-  let myText = 'YAY.';
   let defaultX = width / 2 + 20;
   let defaultY = height / 2 + 10;
 
@@ -34,10 +34,12 @@ function draw() {
   let mirrorX = width - finalX;
   let mirrorY = height - finalY;
 
+  let copies = 21;
+
   for (let i = 0; i <= copies; i += 1) {
     let amt = i / copies;
     let x = lerp(mirrorX, finalX, amt);
     let y = lerp(mirrorY, finalY, amt);
-    text(myText, x, y);
+    text('Yay.', x, y);
   }
 }
