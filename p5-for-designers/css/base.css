@@ -102,17 +102,20 @@ p + p {
   text-indent: 40px;
 }
 
-p > code {
-  background: #f4f3ed;
-  padding: 2px 6px;
-  border-radius: 6px;
-}
-
 code {
+  background: #f4f3ed;
   color: #eb071e;
   font-weight: bold;
   font-family: Monaco, Consolas, monospace;
   font-size: 13.5px;
+  border-radius: 6px;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+pre > code {
+  background: initial;
+  padding: initial;
 }
 
 pre {
@@ -124,3 +127,4 @@ pre {
   background: #f4f3ed;
   border-radius: 6px;
 }
+
