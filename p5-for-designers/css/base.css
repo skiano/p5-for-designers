@@ -65,10 +65,22 @@ main {
   gap: 20px;
 }
 
-section,
-.md-wide {
+section {
   width: 100%;
   max-width: 600px;
+}
+
+a {
+  color: magenta;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+  color: #180e0e;
 }
 
 h1, h2, h3 {
@@ -90,17 +102,25 @@ p + p {
   text-indent: 40px;
 }
 
-pre {
-  font-family: Monaco, Consolas, monospace;
-  font-size: 14px;
-  line-height: 1.6;
-  font-weight: bold;
+p > code {
+  background: #f4f3ed;
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
-pre code,
-pre code.hljs {
-  display: block;
-  padding: 1.5em !important;
+code {
+  color: #eb071e;
+  font-weight: bold;
+  font-family: Monaco, Consolas, monospace;
+  font-size: 13.5px;
+}
+
+pre {
+  font-family: Monaco, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+  font-weight: bold;
+  padding: 1.3em;
   background: #f4f3ed;
   border-radius: 6px;
 }
