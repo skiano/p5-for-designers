@@ -1,6 +1,3 @@
-let focusX = 0;
-let focusY = 0;
-
 function setup() {
   createCanvas(540, 540);
 }
@@ -22,17 +19,12 @@ function draw() {
   let copiesX = 5;
   let copiesY = 4;
 
-  if (mouseX && mouseY) {
-    focusX = lerp(focusX, mouseX, 0.6);
-    focusY = lerp(focusY, mouseY, 0.6);
-  } 
-
   for (let x = 0; x < copiesX; x += 1) {
     for (let y = 0; y < copiesY; y += 1) {
       let cx = lerp(left, right, x / (copiesX - 1));
       let cy = lerp(top, bottom, y / (copiesY - 1));
-      let dx = cx - focusX;
-      let dy = cy - focusY;
+      let dx = cx - mouseX;
+      let dy = cy - mouseY;
       let ang = atan2(dy, dx);
       push();
       translate(cx, cy);
