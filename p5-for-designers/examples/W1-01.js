@@ -1,5 +1,5 @@
 /**
- * @requires plugins/fakeMouse.js
+ * @requires /p5-for-designers/plugins/fakeMouse.js
  */
 
 function setup() {
