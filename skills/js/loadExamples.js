@@ -1,5 +1,5 @@
 
-import { localAsset } from '/p5-for-designers/js/util.js';
+import { localAsset } from '/skills/js/util.js';
 import { parse as parseComments } from 'comment-parser';
 
 window.onHoldIt('p5-viewer', async function loadExample(root, props) {
@@ -13,13 +13,13 @@ window.onHoldIt('p5-viewer', async function loadExample(root, props) {
 
   const styleTags = (
     await Promise.all([
-      '/p5-for-designers/css/reset.css',
+      '/skills/css/reset.css',
     ].map(src => localAsset(src)))
   ).map(href => `<link rel="stylesheet" href="${href}">`).join('\n');
 
   iframe.src = await localAsset(props.src, 'text/html', async (txt) => {
     const extraScripts = [
-      '/p5-for-designers/plugins/responsive.js'
+      '/skills/plugins/responsive.js'
     ];
     const comments = parseComments(txt);
     comments.forEach((comment) => {
