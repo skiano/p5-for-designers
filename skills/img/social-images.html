@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/skills/img/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/skills/img/favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/skills/img/favicon-180x180.png" type="image/png" sizes="180x180">
+
+    <title>Skils Social Image Generator</title>
+    <meta name="robots" content="noindex">
+
+    <!-- Open Graph -->
+    <link rel="stylesheet" href="/skills/css/reset.css">
+
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.45;
+        letter-spacing: -0.005em;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+    <script>
+      function setup() {
+        createCanvas(1200 / 2, 630 / 2);
+      }
+
+      function draw() {
+        background('#8484ff');
+        fill('#f6d7d7');
+        stroke('#292d29');
+        strokeWeight(3);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        textSize(width / 4);
+        textFont('Helvetica');
+
+        let finalX = 400;
+        let finalY = 200;
+        let mirrorX = width - finalX;
+        let mirrorY = height - finalY;
+
+        let copies = 18;
+
+        for (let i = 0; i <= copies; i += 1) {
+          let amt = i / copies;
+          let x = lerp(mirrorX, finalX, amt);
+          let y = lerp(mirrorY, finalY, amt);
+          text('Yay.', x, y);
+        }
+      }
+    </script>
+  </body>
+</html>

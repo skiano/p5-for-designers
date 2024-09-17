@@ -133,8 +133,17 @@ h2 {
   margin-bottom: 10px;
 }
 
+li + li {
+  margin-top: 6px;
+}
+
+li {
+  list-style: square;
+  list-style-position: inside;
+}
+
 p + p {
-  text-indent: 40px;
+  margin-top: 12px;
 }
 
 pre {

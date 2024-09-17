@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/skills/img/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/skills/img/favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/skills/img/favicon-180x180.png" type="image/png" sizes="180x180">
+
+    <title>P5.js | The Mouse</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Handling mouse interactions with p5.js">
+    <link rel="canonical" href="https://skiano.github.io/skills/p5/mouse/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="P5.js | The Mouse">
+    <meta property="og:description" content="Handling mouse interactions with p5.js">
+    <meta property="og:image" content="https://skiano.github.io/skills/img/og-p5.png">
+    <meta property="og:url" content="https://skiano.github.io/skills/p5/mouse/">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="/skills/css/reset.css">
+    <link rel="stylesheet" href="/skills/css/base.css">
+    <link rel="stylesheet" href="/skills/css/highlight.css">
+    <script src="/skills/js/holdIt.js"></script>
+    <script src="/skills/js/inlineCodeSnippet.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav><a href="/skills/p5/">p5.js</a> <span>/</span> <span>The Mouse</span></nav>
+      <a id="home-link" href="/skills/">¯\_(ツ)_/¯</a>
+    </header>
+    <main>
+      <section>
+        <h1>The Mouse</h1>
+        <p>
+          Most design today is dynamic: displaying live data, responding to user input, adapting to a dizzying array of devices, and on and on. Designers in this environment must think, not just visually, but programmatically as well. Learning to program can sensitize us to the limitations—and the power—of creating with code.
+        </p>
+      </section>
+
+      <figure>
+        <hold-it
+          is="p5-viewer"
+          data-src="/skills/examples/W1-01.js"
+          height="350px"
+          style="background: #eeeead;"
+        ></hold-it>
+      </figure>
+
+      <section>
+        <h2>What is p5.js</h2>
+        <p>
+          <a href="https://p5js.org/">P5.js</a> is a creative coding library built with javaScript. It is not, by any means, the only way to do creative coding, but it has a few notable benefits. First, it is open source and runs in any web browser, meaning it is free and easy to use on the internet. That makes it well suited for embedding in websites and supporting user interaction. Second, p5.js is popular, so you can easily find examples and tutorials for most problems. Third, since it is based on processing (another popular creative coding library built with Java), you will learn patterns that can be applied to both.
+        </p>
+        <p>
+          Aenean imperdiet efficitur eros, <em>in auctor risus gravida sed</em>. Praesent tristique magna at mauris gravida tempor. Phasellus malesuada, nisi vitae commodo dapibus, purus sem feugiat leo, sed tristique dui odio vel nisi. Donec gravida vel velit nec rhoncus. Sed laoreet urna sit amet nunc convallis, id dignissim diam porttitor. Suspendisse luctus interdum mauris, et posuere nisi fermentum feugiat. In hac habitasse platea dictumst. Praesent lobortis eleifend ultricies. Donec quis enim magna. Maecenas leo enim, tincidunt in aliquet vel, finibus eu mi. Aliquam a turpis vel lectus finibus auctor. Mauris accumsan diam eros, quis euismod risus rutrum vel. Cras finibus nisl sit amet nibh iaculis volutpat. In malesuada scelerisque elit, et scelerisque libero dapibus in. Proin sit amet magna fermentum eros pulvinar pretium et ut elit.
+        </p>
+        <aside>
+          <strong>Tip:</strong> Always remember to save your work frequently!
+        </aside>
+        <p>
+          Suspendisse potenti. <strong>Maecenas</strong> id pharetra nisl, <code class="language-javascript">var x = 123</code> sapien. Quisque tincidunt justo nec urna auctor scelerisque. Nunc lobortis ornare arcu sed consectetur. Integer lectus neque, gravida vehicula <var>x</var> non, dictum egestas elit. Suspendisse vitae vestibulum tortor. Maecenas nunc neque, sollicitudin et consequat sit amet, varius elementum nibh. Nam vitae posuere nulla. Quisque tempor fringilla nisl, eu imperdiet lorem dignissim sit amet. <mark>Nam rutrum purus eu mi placerat</mark>, eget suscipit orci mollis. Donec pharetra nisl a erat aliquet elementum.
+        </p>
+      </section>
+      
+      <section>
+        <script>
+          inlineCodeSnippet(function () {
+            function setup() {
+              background('red');
+            }
+
+            // A comment...
+            function draw() {
+              line(0, 0, 100, 100);
+            }
+          });
+        </script>
+      </section>
+
+      <section>
+        <p>
+          Aenean imperdiet efficitur eros, in auctor risus gravida sed. Praesent tristique magna at mauris gravida tempor. Phasellus malesuada, nisi vitae commodo dapibus, purus sem feugiat leo, sed tristique dui odio vel nisi. Donec gravida vel velit nec rhoncus. Sed laoreet urna sit amet nunc convallis, id dignissim diam porttitor. Suspendisse luctus interdum mauris, et posuere nisi fermentum feugiat. In hac habitasse platea dictumst. Praesent lobortis eleifend ultricies. Donec quis enim magna. Maecenas leo enim, tincidunt in aliquet vel, finibus eu mi. Aliquam a turpis vel lectus finibus auctor. Mauris accumsan diam eros, quis euismod risus rutrum vel. Cras finibus nisl sit amet nibh iaculis volutpat. In malesuada scelerisque elit, et scelerisque libero dapibus in. Proin sit amet magna fermentum eros pulvinar pretium et ut elit.
+        </p>
+        <aside class="bg-warn">
+          <strong>Be careful:</strong> Always remember to save your work frequently!
+        </aside>
+        <p>
+          Suspendisse potenti. Maecenas id pharetra nisl, eget rhoncus sapien. Quisque tincidunt justo nec urna auctor scelerisque. Nunc lobortis ornare arcu sed consectetur. Integer lectus neque, gravida vehicula nibh non, dictum egestas elit. Suspendisse vitae vestibulum tortor. Maecenas nunc neque, <mark class="bg-warn">sollicitudin et consequat sit</mark> amet, varius elementum nibh. Nam vitae posuere nulla. Quisque tempor fringilla nisl, eu imperdiet lorem dignissim sit amet. Nam rutrum purus eu mi placerat, eget suscipit orci mollis. Donec pharetra nisl a erat aliquet elementum.
+        </p>
+        <p>
+          Aenean imperdiet efficitur eros, in auctor risus gravida sed. Praesent tristique magna at mauris gravida tempor. Phasellus malesuada, nisi vitae commodo dapibus, purus sem feugiat leo, sed tristique dui odio vel nisi. Donec gravida vel velit nec rhoncus. Sed laoreet urna sit amet nunc convallis, id dignissim diam porttitor. Suspendisse luctus interdum mauris, et posuere nisi fermentum feugiat. In hac habitasse platea dictumst. Praesent lobortis eleifend ultricies. Donec quis enim magna. Maecenas leo enim, tincidunt in aliquet vel, finibus eu mi. Aliquam a turpis vel lectus finibus auctor. Mauris accumsan diam eros, quis euismod risus rutrum vel. Cras finibus nisl sit amet nibh iaculis volutpat. In malesuada scelerisque elit, et scelerisque libero dapibus in. Proin sit amet magna fermentum eros pulvinar pretium et ut elit.
+        </p>
+        <blockquote class="pull-quote">
+          This is a pull quote that emphasizes a key point from the text.
+        </blockquote>
+        <p>
+          Suspendisse potenti. Maecenas id pharetra nisl, eget rhoncus sapien. Quisque tincidunt justo nec urna auctor scelerisque. Nunc lobortis ornare arcu sed consectetur. Integer lectus neque, gravida vehicula nibh non, dictum egestas elit. Suspendisse vitae vestibulum tortor. Maecenas nunc neque, amet, varius elementum nibh. Nam vitae posuere nulla. Quisque tempor fringilla nisl, eu imperdiet lorem dignissim sit amet. Nam rutrum purus eu mi placerat, eget suscipit orci mollis. Donec pharetra nisl a erat aliquet elementum.
+        </p>
+      </section>
+
+      <section>
+        <figure>
+          <hold-it
+            is="p5-viewer"
+            data-src="/skills/examples/W1-02.js"
+            ratio="3/2"
+            style="background: #8484ff;"
+          ></hold-it>
+          <figcaption>Example caption here below this awesome thing.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <script>
+          inlineCodeSnippet(function () {
+            let finalX = 20;
+            let finalY = 20;
+
+            function setup() {
+              createCanvas(540, 540);
+            }
+
+            function draw() {
+              background('#8484ff');
+              fill('#f6d7d7');
+              stroke('#292d29');
+              strokeWeight(2);
+              textStyle(BOLD);
+              textAlign(CENTER, CENTER);
+              textSize(width / 4);
+              textFont('Helvetica');
+
+              let defaultX = width / 2 + 20;
+              let defaultY = height / 2 + 10;
+
+              if (
+                mouseX > 0 && mouseX < width && 
+                mouseY > 0 && mouseY < height
+              ) {
+                finalX = lerp(finalX, mouseX, 0.3);
+                finalY = lerp(finalY, mouseY, 0.3);
+              } else {
+                finalX = lerp(finalX, defaultX, 0.1);
+                finalY = lerp(finalY, defaultY, 0.1);
+              }
+
+              let mirrorX = width - finalX;
+              let mirrorY = height - finalY;
+
+              let copies = 21;
+
+              for (let i = 0; i <= copies; i += 1) {
+                let amt = i / copies;
+                let x = lerp(mirrorX, finalX, amt);
+                let y = lerp(mirrorY, finalY, amt);
+                text('Yay.', x, y);
+              }
+            }
+          });
+        </script>
+      </section>
+
+      <section>
+        <figure>
+          <hold-it
+            is="p5-viewer"
+            data-src="/skills/examples/W1-03.js"
+            ratio="3/2"
+            style="background: #ff5555;"
+          ></hold-it>
+          <figcaption>Example caption here below this awesome thing.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <hold-it
+            is="p5-viewer"
+            data-src="/skills/examples/W1-04.js"
+            ratio="3/2"
+            style="background: #292d29;"
+          ></hold-it>
+          <figcaption>Example caption here below this awesome thing.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <hold-it
+            is="p5-viewer"
+            data-src="/skills/examples/lazyExample.js"
+            ratio="3/2"
+            style="background: #00a2a2;"
+          ></hold-it>
+          <figcaption>Example caption here below this awesome thing.</figcaption>
+        </figure>
+      </section>
+    </main>
+    <script type="importmap">
+      {
+        "imports": {
+          "p5": "https://esm.run/p5@1.10",
+          "comment-parser": "https://esm.run/comment-parser@1.4.1"
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+    <script type="module" src="/skills/js/loadExamples.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>
