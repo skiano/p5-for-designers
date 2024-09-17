@@ -6,13 +6,20 @@
     const values = {};
     const damp = {};
     const ctx = this;
+    const epsilon = 0.01;
 
     this.lazy = new Proxy({}, {
       get(target, key) {
         if (key === '_update') {
           return () => {
             keys.forEach((k) => {
-              values[k] = ctx.lerp(values[k], target[k], damp[k] || 0.5);
+              if (values[k] === target[k]) {
+                return;
+              } else if (Math.abs(values[k] - target[k]) < epsilon) {
+                values[k] = target[k];
+              } else {
+                values[k] = ctx.lerp(values[k], target[k], damp[k] || 0.5);
+              }
             });
           }
         }
