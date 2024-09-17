@@ -1,4 +1,4 @@
-# P5.js For Designers
+# Skills by Greg Skiano
 
 ## Local development
 
