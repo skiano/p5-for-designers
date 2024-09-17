@@ -37,28 +37,24 @@
       }
 
       function draw() {
-        background('#8484ff');
-        fill('#f6d7d7');
-        stroke('#292d29');
-        strokeWeight(3);
+        background('#f4f4fd');
+        fill('#f4f4fd');
+        stroke('#ff00ff')
+        
         textStyle(BOLD);
         textAlign(CENTER, CENTER);
-        textSize(width / 4);
+        textSize(width / 3);
         textFont('Helvetica');
 
-        let finalX = 400;
-        let finalY = 200;
-        let mirrorX = width - finalX;
-        let mirrorY = height - finalY;
+        strokeWeight(6);
+        rect(0, 0, width, height);
 
-        let copies = 18;
+        strokeWeight(2);
+        line(0, 0, width, height);
+        line(0, height, width, 0);
 
-        for (let i = 0; i <= copies; i += 1) {
-          let amt = i / copies;
-          let x = lerp(mirrorX, finalX, amt);
-          let y = lerp(mirrorY, finalY, amt);
-          text('Yay.', x, y);
-        }
+        strokeWeight(4);
+        text('Skills', width / 2, height / 2);
       }
     </script>
   </body>
