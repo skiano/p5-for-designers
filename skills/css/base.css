@@ -65,7 +65,7 @@ header {
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 14.5px;
 }
 
 nav {
@@ -140,6 +140,11 @@ li + li {
 li {
   list-style: square;
   list-style-position: inside;
+}
+
+li > a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 p + p {
@@ -235,10 +240,29 @@ figcaption {
   font-weight: bold;
   text-decoration: none;
   font-size: 22px;
+  overflow: hidden;
+  transition: all 250ms ease;
+  outline: 2px solid transparent;
+  outline-offset: 0px;
+}
+
+.guide-link > a::before {
+  content: '';
+  display: block;
+  background: #8484ff;
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: hue;
+  opacity: 1;
+  transition: opacity 250ms ease;
 }
 
 .guide-link > a:hover {
-  color: #d8d847;
-  outline: 2px solid #8484ff;
+  color: #fff;
+  outline: 2px solid magenta;
   outline-offset: 4px;
+}
+
+.guide-link > a:hover::before {
+  opacity: 0;
 }

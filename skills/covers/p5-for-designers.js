@@ -1,50 +1,41 @@
-/**
- * @requires /skills/plugins/fakeMouse.js
- */
-
-
 let finalX;
 let finalY;
 
 function setup() {
   createCanvas(540, 540);
-  finalX = width / 2;
-  finalY = height / 2;
+}
+
+function star(cx, cy, r1, r2, points) {
+  let inc = TAU / points;
+  beginShape();
+  for (let i = 0; i < points; i++) {
+    let ang = i * inc;
+    vertex(cx + cos(ang) * r1, cy + sin(ang) * r1)
+    let ang2 = ang + inc / 2;
+    vertex(cx + cos(ang2) * r2, cy + sin(ang2) * r2)
+  }
+  endShape(CLOSE);
 }
 
 function draw() {
   background('#292d29');
-  fill('#757e75');
-  stroke('#292d29');
-  strokeWeight(2);
-  textStyle(BOLD);
-  textAlign(CENTER, CENTER);
-  textSize(width / 4);
-  textFont('Helvetica');
+  fill('#292d29');
+  stroke('#757e75');
+  strokeWeight(1.5);
 
-  let defaultX = width / 2 + 20;
-  let defaultY = height / 2 + 10;
+  translate(width / 2, height / 2);
 
-  if (
-    mouseX > 0 && mouseX < width && 
-    mouseY > 0 && mouseY < height
-  ) {
-    finalX = lerp(finalX, mouseX, 0.3);
-    finalY = lerp(finalY, mouseY, 0.3);
-  } else {
-    finalX = lerp(finalX, defaultX, 0.1);
-    finalY = lerp(finalY, defaultY, 0.1);
-  }
+  let rf = sin(frameCount / 30) * 20;
 
-  let mirrorX = width - finalX;
-  let mirrorY = height - finalY;
+  push();
+  stroke('#00a2a2');
+  rotate(-frameCount / 140);
+  star(0, 0, 120, 60 + rf, 12);
+  pop();
 
-  let copies = 21;
-
-  for (let i = 0; i <= copies; i += 1) {
-    let amt = i / copies;
-    let x = lerp(mirrorX, finalX, amt);
-    let y = lerp(mirrorY, finalY, amt);
-    text('Yay.', x, y);
-  }
+  push();
+  stroke('magenta');
+  rotate(frameCount / 140);
+  star(0, 0, 120, 50 - rf, 18);
+  pop();
 }
