@@ -89,7 +89,7 @@ header a {
 }
 
 main {
-  margin: 50px auto;
+  margin: 40px auto 50px;
   max-width: 900px;
   display: flex;
   flex-direction: column;
@@ -254,6 +254,7 @@ figcaption {
 
 .big-cover {
   position: relative;
+  cursor: default;
 }
 
 .big-cover__content {
