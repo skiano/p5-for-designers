@@ -1,5 +1,7 @@
 # Skills by Greg Skiano
 
+👀 See it live: https://skiano.github.io/skills/
+
 ## Local development
 
 You just need an internet connection and a webserver to serve these files.
