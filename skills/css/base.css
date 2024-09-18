@@ -152,7 +152,7 @@ p + p {
 }
 
 pre {
-  font-family: Monaco, Consolas, monospace;
+  font-family: Consolas, monospace;
   font-size: 13.5px;
   line-height: 1.6;
   font-weight: bold;
@@ -169,7 +169,7 @@ code, var {
   background: #e8e8fa;
   color: #292d29;
   font-weight: bold;
-  font-family: Monaco, Consolas, monospace;
+  font-family: Consolas, monospace;
   font-size: 13.5px;
   border-radius: 6px;
   padding: 2px 6px;
