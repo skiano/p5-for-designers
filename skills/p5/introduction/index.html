@@ -29,15 +29,76 @@
   </head>
   <body>
     <header>
-      <nav><a href="/skills/p5/">p5.js</a> <span>/</span> <span>Introduction</span></nav>
+      <nav><a href="/skills/p5/">p5.js</a> <span>/</span> <span>Getting Started</span></nav>
       <a id="home-link" href="/skills/">¯\_(ツ)_/¯</a>
     </header>
     <main>
       <section>
-        <h1>Introduction</h1>
+        <h1>Getting Started</h1>
         <p>
-          TODO...
+          This guide will walk you through buiding a series of “sketches” (i.e. little web pages) that respond to different user inputs, namely mouse movements, keystrokes, and the user’s camera. By the end you will have a grasp of basic programming concepts and how they support interactivity on the web.
         </p>
+      </section>
+      <section>
+        <h2>What is a website?</h2>
+        <p>
+          For the purposes of this guide, you can think of a web page as an interactive thing made of three parts: HTML, CSS, and JavaScript. Roughly speaking, HTML defines the “content” of the page, CSS defines how the page “looks,” and JavaScript controls how the page “behaves.” Your little web pages will be all about <em>behavior,</em> so you will be dealing almost exclusively with that third part, JavaScript. 
+        </p>
+        <p>
+          JavasScript is a powerful programming language that forms the backbone of every interaction you have with any website, and, as you can imagine, it takes a long time to master. Luckilly, developers have created many, many free JavaScript “libraries” you can use to solve specific kinds of problems. Whatever you want to do, chances are somebody has already done something similar, and (in general) web developers love sharing their solutions.
+        </p>
+      </section>
+      <section>
+        <h2>What is p5.js?</h2>
+        <p>
+          <a href="https://p5js.org/" target="_blank">p5.js</a> is a creative coding library built in javaScript. It’s not the only way to do creative coding, but it has a few notable benefits. First, it’s open source and works in any web browser, meaning it is free and easy to use on the internet. Second, p5.js is popular, so finding examples and tutorials for most problems is relatively easy. Third, it has a proven track record introducing artists and designers to software development.
+        </p>
+      </section>
+      <section>
+        <h2>What is a “sketch”?</h2>
+        <p>
+          Projects in p5.js are called “sketches,” and each one begins by defining a <code>setup()</code> and a <code>draw()</code> function. For now, you can think of a <strong>function</strong> as a reusable task. Some functions are defined by JavasScript itself, some by the web browser, some by p5, and others are defined by you. The first thing p5 does when your page loads is find the setup function (defined by you) and <strong>call</strong> it (i.e. make it do the task). Then, p5 will find your draw function and begin calling it repeatedly an <strong>animation loop</strong>, simulating continuous motion like frames in a video.
+        </p>
+      </section>
+      <section>
+          <figure>
+          <script>
+            inlineCodeSnippet(function () {
+              function setup() {
+                // Here is where the "setup" code will be written
+                // to configure the canvas
+                // This will be called first and *ONCE*
+              }
+
+              function draw() {
+                // Here is where the "drawing" code will be written
+                // This will be called *REPEATEDLY*
+              }
+            });
+          </script>
+          <figcaption>A sketch starts by defining two functions: setup and draw.</figcaption>
+        </figure>
+      </section>
+      <section>
+        <p>
+          Inisde the <strong>body</strong> of your setup and draw functions—body refers to the code between the curly braces <code>{...}</code> of your function—you will make use of <strong>variables</strong>, <strong>constants</strong>, and <strong>functions</strong> defined by p5 in order to create your animation. A variable is a value that could change over time, like the x/y position of the mouse or the width of the canvas. A constant is a value that never changes, and you will notice p5 constants are always ALL CAPS. Functions, as mentioned above, define a sharable task, like drawing a circle or rounding a number. Building on our basic structure, here is a simple sketch that uses three functions and two variables defined by p5.
+        </p>
+      </section>
+      <section>
+          <figure>
+          <script>
+            inlineCodeSnippet(function () {
+              function setup() {
+                createCanvas(540, 540)
+              }
+
+              function draw() {
+                background('white')
+                circle(60, 60, 30)
+              }
+            });
+          </script>
+        </figure>
       </section>
       <section>
         <ul>
