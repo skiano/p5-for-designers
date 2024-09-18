@@ -211,3 +211,34 @@ figcaption {
   max-width: 600px;
 }
 
+.guide-link {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.guide-cover {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.guide-link > a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.guide-link > a:hover {
+  color: #d8d847;
+  outline: 2px solid #8484ff;
+  outline-offset: 4px;
+}

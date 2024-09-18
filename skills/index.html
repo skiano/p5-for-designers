@@ -25,22 +25,71 @@
     <link rel="stylesheet" href="/skills/css/base.css">
     <link rel="stylesheet" href="/skills/css/highlight.css">
     <script src="/skills/js/holdIt.js"></script>
-    <script src="/skills/js/inlineCodeSnippet.js"></script>
+
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .big-nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .big-nav h1 {
+        margin: 22px 0 0px;
+        line-height: 50px;
+        font-size: 50px;
+      }
+
+      .big-nav h2 {
+        font-weight: normal;
+        font-size: 16px;
+        color: #757e75;
+      }
+
+      .shruggie {
+        color: magenta;
+      }
+
+      .bottom {
+        margin-top: 40px;
+      }
+    </style>
   </head>
   <body>
-    <main>
+
+    <nav class="big-nav">
       <section>
-        <h1>Skill Guides</h1>
-        <p>
-          Project-based guides...
-        </p>
+        <span class="shruggie">¯\_(ツ)_/¯</span>
+        <h1>Skills</h1>
+        <h2 class="byline">by Greg Skiano</h2>
       </section>
-      <section>
-        <ul>
-          <li><a href="/skills/p5/">p5.js for Designers</a></li>
-        </ul>
-      </section>
-    </main>
+
+      <div class="guide-link">
+        <div class="guide-cover">
+          <hold-it
+            is="p5-viewer"
+            data-src="/skills/covers/p5-for-designers.js"
+            ratio="1/1"
+            style="background: #292d29;"
+          ></hold-it>
+        </div>
+        <a href="/skills/p5/">p5.js for Designers</a>
+      </div>
+
+      <!-- <section class="bottom">
+        <a href="#">About</a>
+      </section> -->
+    </nav>
+
+
     <script type="importmap">
       {
         "imports": {
@@ -51,6 +100,5 @@
     </script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
     <script type="module" src="/skills/js/loadExamples.js"></script>
-    <script>hljs.highlightAll();</script>
   </body>
 </html>
