@@ -246,23 +246,35 @@ figcaption {
   outline-offset: 0px;
 }
 
-/* .guide-link > a::before {
-  content: '';
-  display: block;
-  background: #8484ff;
-  position: absolute;
-  inset: 0;
-  mix-blend-mode: hue;
-  opacity: 1;
-  transition: opacity 250ms ease;
-} */
-
 .guide-link > a:hover {
   color: #fff;
   outline: 2px solid magenta;
   outline-offset: 4px;
 }
 
-/* .guide-link > a:hover::before {
-  opacity: 0;
-} */
+.big-cover {
+  position: relative;
+}
+
+.big-cover__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  width: 100%;
+  padding: 16px 30px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.big-cover__content > h1,
+.big-cover__content > h2 {
+  color: #fff;
+  text-wrap: balance;
+  margin-bottom: 0;
+}
+
+.big-cover__content > h2 {
+  font-weight: normal;
+  font-size: 20px;
+}

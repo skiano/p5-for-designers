@@ -25,17 +25,20 @@ function draw() {
 
   translate(width / 2, height / 2);
 
-  let rf = sin(frameCount / 30) * 20;
+  let variation = 20;
+  let rf = sin(frameCount / 30) * variation;
+  let r1 = height / 4;
+  let r2 = width / 2;
 
   push();
   stroke('#00a2a2');
   rotate(-frameCount / 140);
-  star(0, 0, 120, 60 + rf, 12);
+  star(0, 0, r2, r1 + rf, 12);
   pop();
 
   push();
   stroke('magenta');
   rotate(frameCount / 140);
-  star(0, 0, 120, 50 - rf, 18);
+  star(0, 0, r2, r1 - rf, 18);
   pop();
 }
