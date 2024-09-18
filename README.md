@@ -1,5 +1,9 @@
 # Skills by Greg Skiano
 
+A collection of project-based guides for whatever interests me.
+
+👀 See it live: https://skiano.github.io/skills/
+
 ## Local development
 
 You just need an internet connection and a webserver to serve these files.
