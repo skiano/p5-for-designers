@@ -89,17 +89,41 @@
           <script>
             inlineCodeSnippet(function () {
               function setup() {
-                createCanvas(540, 540)
+                createCanvas(600, 400)
               }
 
               function draw() {
-                background('white')
-                circle(60, 60, 30)
+                background('magenta')
+                circle(300, 200, 200)
               }
             });
           </script>
         </figure>
       </section>
+      <section>
+        <p>
+          This setup creates a canvas 600px wide by 400px tall. It does so by calling p5’s <a href="https://p5js.org/reference/p5/createCanvas/" target="_blank">createCanvas</a> function. A Function is called by writing its name followed by parentheses <code>()</code>. Inside the parentheses you pass any <strong>arguments</strong> the function expects, separated by commas. In this case, <code>createCanvas</code> expects two number arguments, the width of the canvas followed by its height. 
+        </p>
+        <p>
+          Inside the draw function, the first call is to p5’s <a href="https://p5js.org/reference/p5/background/" target="_blank">background</a> function with the string argument <code>'magenta'</code>, which fills the whole canvas with white. You can represent colors several ways in p5, but don’t worry too much about it for now. After we fill the background, we draw a circle. The <a href="https://p5js.org/reference/p5/circle/" target="_blank">circle</a> function accepts three number arguments: the “x” position of the circle <code>300</code>, the “y” position of the circle <code>200</code>, and the diameter of the circle <code>200</code>. The x/y positions and diameter refer to the cooridinate system p5 uses to draw, which you will learn about later.
+        </p>
+        <p>
+          If we run this sketch inside a web page that contains the p5.js library, the result looks like this.
+        </p>
+      </section>
+      <section>
+        <hold-it
+          is="p5-viewer"
+          data-src="/skills/examples/W0-01.js"
+          ratio="3/2"
+          style="background: magenta;"
+        ></hold-it>
+      </section>
+
+      <section>
+        Actually, you can try it yourself here.
+      </section>
+
       <section>
         <ul>
           <li><a href="/skills/p5/mouse/">Next up: The Mouse</a></li>
