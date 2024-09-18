@@ -246,7 +246,7 @@ figcaption {
   outline-offset: 0px;
 }
 
-.guide-link > a::before {
+/* .guide-link > a::before {
   content: '';
   display: block;
   background: #8484ff;
@@ -255,7 +255,7 @@ figcaption {
   mix-blend-mode: hue;
   opacity: 1;
   transition: opacity 250ms ease;
-}
+} */
 
 .guide-link > a:hover {
   color: #fff;
@@ -263,6 +263,6 @@ figcaption {
   outline-offset: 4px;
 }
 
-.guide-link > a:hover::before {
+/* .guide-link > a:hover::before {
   opacity: 0;
-}
+} */
